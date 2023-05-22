@@ -5,24 +5,30 @@
 
 # You can assume that the input string is non-empty
 
-# brute force
-# nested loops
+# using dictionaries
+# n = string length
+# m = items in dictionary
+# time = 0(n + m) because we are performing two loops, once over the string, and another time through the dictionary values
+# space = 0(m) 
+
+# def most_frequent_char(s):
+#   char_counts = {}
+#   max_count = 0
+#   letter = ''
+#   for letter in s:
+#     if letter not in char_counts:
+#       char_counts.update({letter: 0})
+#     char_counts[letter] += 1
+
+#   for key, value in char_counts.items():
+#     if value > max_count:
+#       max_count = value
+#       letter = key
+
+#   return letter
 
 def most_frequent_char(s):
-  char_counts = {}
-  max_count = 0
-  letter = ''
-  for letter in s:
-    if letter not in char_counts:
-      char_counts.update({letter: 0})
-    char_counts[letter] += 1
-
-  for key, value in char_counts.items():
-    if value > max_count:
-      max_count = value
-      letter = key
-
-  return letter
+    pass
       
 
 print(most_frequent_char('bookeeper')) # -> 'e'
