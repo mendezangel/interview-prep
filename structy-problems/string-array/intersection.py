@@ -5,12 +5,24 @@
 # You may assume that each input list does not contain duplicate
 # elements.
 
+# def intersection(a, b):
+#     nums = {}
+#     final_list = []
+#     for i, num in enumerate(a):
+#         if num not in nums:
+#             nums[num] = i
+
+#     for num in b:
+#         if num in nums:
+#             final_list.append(num)
+#     return final_list
+
 def intersection(a, b):
-    nums = {}
+    nums = set()
     final_list = []
-    for i, num in enumerate(a):
+    for num in a:
         if num not in nums:
-            nums[num] = i
+            nums.add(num)
 
     for num in b:
         if num in nums:
