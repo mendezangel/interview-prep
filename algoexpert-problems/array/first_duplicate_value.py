@@ -19,7 +19,13 @@
 # output: 3 -> 3 is the first integer that appears more than once.
 
 def first_duplicate_value(array):
-    pass
+    nums = set()
+    for num in array:
+        if num in nums:
+            return num
+        else:
+            nums.add(num)
+    return -1
 
 print(first_duplicate_value([2, 1, 5, 2, 3, 3, 4])) # 2
 print(first_duplicate_value([2, 1, 5, 3, 3, 2, 4])) # 3
