@@ -7,13 +7,18 @@ class Node:
         self.val = val
         self.next = None
 
+# def linked_list_values(head):
+#     current = head
+#     values = []
+#     while current is not None:
+#         values.append(current.val)
+#         current = current.next
+#     return values
+
 def linked_list_values(head):
-    current = head
-    values = []
-    while current is not None:
-        values.append(current.val)
-        current = current.next
-    return values
+    if head == None:
+        return []
+    return [head.val, *linked_list_values(head.next)]
 
 a = Node('a')
 b = Node('b')
