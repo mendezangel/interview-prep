@@ -1,4 +1,5 @@
 array = [1, 2, 3]
-num = 2
-num += array.pop()
-print(num, array)
+copy = list(array)
+copy.pop()
+print(f'original: {array}')
+print(f'copy: {copy}')
