@@ -11,7 +11,7 @@
 # if sorted word is present in the dictionary, add non sorted word to that key's list
 # once iteration is finished return dictionary values as an array
 
-# Time: O(n log n)
+# Time: O(m * nlogn) m = length of strs list, n = length of strs[i]
 # Space: O(n)
 class Solution:
     def group_anagrams(self, strs: list[str]) -> list[list[str]]:
