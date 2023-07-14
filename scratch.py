@@ -1,15 +1,12 @@
-def all_permutations(string, i=0, letters=set()):
-    if i >= len(string):
-        return string
-    letters = set([*string])
-    print(string)
-    for letter in letters:
-        if letter != string[i]:
-            string_list = [*string]
-            string_list[i] = letter
-            new_string = ''.join(string_list)
-            all_permutations(new_string, i + 1, letters)
-        
-
-
-print(all_permutations('abc'))
+def minStart(arr):
+    min_starting_val = 1 - arr[0] if 1 - arr[0] > 0 else 1
+    for num in arr:
+        print(f'min starting val: {min_starting_val}')
+        sum = num + min_starting_val
+        print(f'current num: {num}')
+        print(f'sum: {sum}')
+        if sum < 1:
+            min_starting_val += 1 - sum
+    return min_starting_val
+    
+print(minStart([10, -5, 4, -2, 3, 1, -1, -6, -1, 0, 5]))
