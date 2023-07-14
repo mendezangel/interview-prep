@@ -17,22 +17,31 @@
 # Time: O(n)
 # Space: O(1)
 class Solution:
+    # def min_start_value(self, nums: list[int]) -> int:
+    #     min_start = 1 if nums[0] > 0 else 1 - nums[0]
+    #     sum = min_start
+    #     i = 0
+    #     while i < len(nums):
+    #         steps += 1
+    #         current_num = nums[i]
+    #         sum += current_num
+    #         if sum < 1:
+    #             difference = 1 - sum
+    #             min_start += difference
+    #             sum = min_start
+    #             i = 0
+    #         else:
+    #             i += 1
+    #     return min_start
+
     def min_start_value(self, nums: list[int]) -> int:
-        min_start = 1 if nums[0] > 0 else 1 - nums[0]
-        sum = min_start
-        i = 0
-        while i < len(nums):
-            steps += 1
-            current_num = nums[i]
-            sum += current_num
-            if sum < 1:
-                difference = 1 - sum
-                min_start += difference
-                sum = min_start
-                i = 0
-            else:
-                i += 1
-        return min_start
+        lowest_num = 0
+        sum = 0
+        for num in nums:
+            sum += num
+            if sum < lowest_num:
+                lowest_num = sum
+        return abs(lowest_num) + 1
 
 solution = Solution()
 print(solution.min_start_value([-3, 2, -3, 4, 2])) # 5
