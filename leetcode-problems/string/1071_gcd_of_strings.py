@@ -5,15 +5,15 @@
 # Given two string str1 and str2, return the largest string x such
 # that x divides both str1 and str2
 
-# two pointers
-# one pointer will look at str1, and other will look at str2
-# while pointer two is less than str2 length
-# compare both letters, if match keep incrementing pointers
-# for each letter add it to a set
+# brute force
+# find the shorter string among str1 and str2
+# start with base = shorter string, and check if both str1 and str2 are made of multiples of base.
+#   if so, return base.
+#   otherwise, we shall try a shorter string by removing the last character from base.
+# if we have checked all prefix strings without finding the gcd string, return ''
 
 class Solution:
-    def gcd_of_strings(self, str1: str, str2: str) -> str:
-        pass
+    pass
 
 solution = Solution()
 print(solution.gcd_of_strings('ABCABC', 'ABC')) # 'ABC'
