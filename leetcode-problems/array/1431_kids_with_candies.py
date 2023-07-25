@@ -15,14 +15,11 @@
 # return output array
 
 # Time: O(n + n) -> O(2n) -> O(n)
-# Space: O(n)
+# Space: O(1) without couting space of input and output
 class Solution:
     def kids_with_candies(self, candies: list[int], extraCandies: int) -> list[bool]:
         output_array = []
-        highest_num = 0
-        for num in candies:
-            if num > highest_num:
-                highest_num = num
+        highest_num = max(candies)
         
         for num in candies:
             current_num = extraCandies + num
