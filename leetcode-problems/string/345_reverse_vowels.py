@@ -4,7 +4,7 @@
 
 # Constraints
 # 1 <= s.length <= 3 * 10^5
-# s consits of printable ASCII characters
+# s consists of printable ASCII characters
 
 # Reasoning
 # like reversing a string but only reversing the vowels
